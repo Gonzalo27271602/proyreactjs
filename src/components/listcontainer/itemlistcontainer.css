@@ -1,0 +1,14 @@
+.itemlist {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+                        'card card card card'
+                        'card card card card'
+                        'card card card card';
+    gap: 100px;
+    padding: 5px;
+    background-color: white;
+    justify-items: center;
+    justify-content: space-evenly;
+  }

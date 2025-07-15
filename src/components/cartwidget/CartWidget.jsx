@@ -1,6 +1,7 @@
 import carrito from"../../assets/carrito.jpg";
 import "./CartWidget.css";
 
+
 const CartWidget = () => {
   return (
     <div className="cartwidget">

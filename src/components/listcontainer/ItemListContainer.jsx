@@ -1,11 +1,19 @@
-import React from 'react'
+import {ItemList} from '../ItemList/ItemList';
+import './itemlistcontainer.css';
+import useProducts from "../../hooks/useProducts";
+import Loading from '../Loading/Loading';
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
+  const {products, loading} = useProducts();
+
   return (
-    <div>
-        <h2>{props.saludo}</h2>
-    </div>
+    <main>
+      <h2>Bienvenido a mi e-commerce</h2>
+      {
+        loading ? <Loading /> : <ItemList products = {products} />
+      }
+    </main>
   )
 }
 
-export default ItemListContainer
+export default ItemListContainer;

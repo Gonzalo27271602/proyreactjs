@@ -1,18 +1,17 @@
 import './App.css';
 import NavBar from './components/navbar/NavBar';
 import ItemListContainer from './components/listcontainer/ItemListContainer';
+import { ItemListWithSearch } from './components/ItemList/ItemList';
 
 function App() {
-  
-  const saludo = ("");
 
   return (
     <div className="app-container">
       <NavBar />
-      <h2>{saludo}</h2>
-      <ItemListContainer saludo = {"Bienvenidos a mi e-commers"} />
+      <ItemListContainer />
+      <ItemListWithSearch />
     </div>
   )
 }
 
-export default App
+export default App;
