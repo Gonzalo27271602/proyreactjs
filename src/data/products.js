@@ -6,7 +6,7 @@ const products = [
         stock: 1,
         image: "/img/automatizacion.jpg",
         price: "100 u$d",
-        category: "1",
+        category: "Gas",
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const products = [
         stock: 1,
         image: "/img/CeldaMT.webp",
         price: "100 u$d",
-        category: "2",
+        category: "Gas",
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const products = [
         stock: 1,
         image: "/img/montajes eléctricos.jpg",
         price: "100 u$d",
-        category: "3",
+        category: "Aire",
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ const products = [
         stock: 1,
         image: "/img/mediciones.jpg",
         price: "100 u$d",
-        category: "1",
+        category: "Fuel Oil",
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ const products = [
         stock: 1,
         image: "/img/panelsolar.jpg",
         price: "100 u$d",
-        category: "2",
+        category: "Programadores",
     },
     {
         id: 6,
@@ -51,7 +51,7 @@ const products = [
         stock: 1,
         image: "/img/trabajador.jpg",
         price: "100 u$d",
-        category: "3",
+        category: "Quemadores",
     },
     {
         id: 7,
@@ -60,7 +60,7 @@ const products = [
         stock: 1,
         image: "/img/ingenieria.jpg",
         price: "100 u$d",
-        category: "1",
+        category: "Aire",
     },
     {
         id: 8,
@@ -69,7 +69,7 @@ const products = [
         stock: 1,
         image: "/img/ingenieria.jpg",
         price: "100 u$d",
-        category: "2",
+        category: "Programadores",
     },
     {
         id: 9,
@@ -78,7 +78,7 @@ const products = [
         stock: 1,
         image: "/img/ingenieria.jpg",
         price: "100 u$d",
-        category: "3",
+        category: "Quemadores",
     },
     {
         id: 10,
@@ -87,7 +87,7 @@ const products = [
         stock: 1,
         image: "/img/ingenieria.jpg",
         price: "100 u$d",
-        category: "1",
+        category: "Aire",
     },
     {
         id: 11,
@@ -96,7 +96,7 @@ const products = [
         stock: 1,
         image: "/img/ingenieria.jpg",
         price: "100 u$d",
-        category: "2",
+        category: "Programadores",
     },
     {
         id: 12,
@@ -105,7 +105,7 @@ const products = [
         stock: 1,
         image: "/img/ingenieria.jpg",
         price: "100 u$d",
-        category: "3",
+        category: "Quemadores",
     },
 ];
 
@@ -118,4 +118,14 @@ const getProducts = () => {
     });
 };
 
-export default getProducts;
+const getProductsById = (productId) => {
+    return new Promise ((resolve, reject) => {
+
+        setTimeout(() => {
+        const product = products.find((product) => product.id === productId);
+        resolve(product);
+        }, 2000);
+    });
+};
+
+export {getProducts, getProductsById};

@@ -1,18 +1,26 @@
 import { useEffect, useState } from "react";
-import getProducts from '../data/products.js';
+import {getProducts} from '../data/products.js';
 
-const useProducts = () => {
+const useProducts = (category) => {
     //EL USE STATE ES PARA QUE CUANDO LLEGA LA INFO SE GUARDE EN NUNESTRA ARIABLE DE ESTADO
     const [products, setProducts] = useState ([]);
     const [loading, setLoading] = useState (true);
 
+    console.log(category)
     //EL USE STATE ES PARA QUE SE EJECUTE UNA SOLA VEZ Y CADA VEZ QUE SE ACTUALIZA LA VISTA SE VUELVA A RENDERIZAR.
     useEffect (() => {
 
         //consumimos la funcion con .then para usar el intervalo de timepo
         getProducts()
             .then((data) => {
-                setProducts(data);
+                if(category) {
+                //(filtra la info por categoria)
+                    const productsFilter = data.filter((product) => product.category === category);
+                    setProducts(productsFilter);
+                } else{
+                //guardamos toda la info
+                    setProducts(data);
+                }
         })
 
             //UTILIZAMOS EL METODO PARA FINALIZAR 
