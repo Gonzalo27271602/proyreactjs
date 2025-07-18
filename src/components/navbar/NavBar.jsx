@@ -12,19 +12,19 @@ const NavBar = () => {
                 </Link>
                 <ul className="navlinks">
                     <li>
-                        <Link to="/Category/Gas">Gas</Link>
+                        <Link to="/category/gas">Gas</Link>
                     </li>
                     <li>
-                        <Link to="/Category/Aire">Aire</Link>
+                        <Link to="/category/aire">Aire</Link>
                     </li>
                     <li>
-                        <Link to="/Category/Fuel Oil">Fuel Oil</Link>
+                        <Link to="/category/fueloil">Fuel Oil</Link>
                     </li>
                     <li>
-                        <Link to="/Category/Programadores">Programadores</Link>
+                        <Link to="/category/programadores">Programadores</Link>
                     </li>
                     <li>
-                        <Link to="/Category/Quemadores">Quemadores</Link>
+                        <Link to="/Category/quemadores">Quemadores</Link>
                     </li>
                 </ul>
             </div>

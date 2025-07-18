@@ -6,9 +6,9 @@ const useProducts = (category) => {
     const [products, setProducts] = useState ([]);
     const [loading, setLoading] = useState (true);
 
-    console.log(category)
     //EL USE STATE ES PARA QUE SE EJECUTE UNA SOLA VEZ Y CADA VEZ QUE SE ACTUALIZA LA VISTA SE VUELVA A RENDERIZAR.
     useEffect (() => {
+        setLoading(true);
 
         //consumimos la funcion con .then para usar el intervalo de timepo
         getProducts()
@@ -28,7 +28,7 @@ const useProducts = (category) => {
                 setLoading(false);
         })
 
-    }, []);
+    }, [category]);
 
     //RETORNAMOS LA VARIABLE DE ESTADO PRODUCTS Y LA VARIABLE DE ESTADO LOADING
     return {products, loading};
