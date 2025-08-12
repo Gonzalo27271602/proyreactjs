@@ -1,0 +1,15 @@
+import React from 'react'
+
+const FormCheckout = ({dataForm, handleChangeInput, sendOrder}) => {
+  return (
+    <form onSubmit={sendOrder}>
+        <h2>Checkout</h2>
+        <input type="text" name="fullname" value={dataForm.fullname} onChange={handleChangeInput} placeholder="Nombre completo"></input>
+        <input type="number" name="phone" value={dataForm.phone} onChange={handleChangeInput} placeholder="Numero de telefono"></input>
+        <input type="email" name="email" value={dataForm.email} onChange={handleChangeInput} placeholder="Correo electrónico"></input>
+        <button type="submit">Enviar orden</button>
+    </form>
+  )
+};
+
+export default FormCheckout;
